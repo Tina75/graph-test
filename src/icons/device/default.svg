@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/图谱/拓扑/设备/默认</title>
+    <g id="icon/图谱/拓扑/设备/默认" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(5.000000, 5.000000)">
+            <circle id="椭圆形" fill="#21C2CC" cx="24" cy="24" r="24"></circle>
+            <g id="computer-fill-(1)" transform="translate(12.000000, 12.000000)">
+                <polygon id="路径" points="0 0 24 0 24 24 0 24"></polygon>
+                <path d="M13,18 L13,20 L17,20 L17,22 L7,22 L7,20 L11,20 L11,18 L2.992,18 C2.72678869,17.9984163 2.47311496,17.8913333 2.28699136,17.7023953 C2.10086777,17.5134573 1.99760354,17.2582052 1.9999592,16.993 L1.9999592,4.007 C1.9999592,3.451 2.455,3 2.992,3 L21.008,3 C21.556,3 22,3.449 22,4.007 L22,16.993 C22,17.549 21.545,18 21.008,18 L13,18 L13,18 Z" id="路径" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

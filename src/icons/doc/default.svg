@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/图谱/拓扑/文档/默认</title>
+    <g id="icon/图谱/拓扑/文档/默认" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(5.000000, 5.000000)">
+            <circle id="椭圆形" fill="#FFC60B" cx="24" cy="24" r="24"></circle>
+            <path d="M33.0000247,21 L33.0000247,32.993 C33.001863,33.2582184 32.8982888,33.5133136 32.7120638,33.7021642 C32.5258387,33.8910147 32.2722185,33.99815 32.007,34 L15.993,34 C15.4449715,34 15.0005519,33.5560282 15,33.008 L15,14.992 C15,14.455 15.447,14 15.998,14 L26,14 L26,20 C26,20.5522847 26.4477153,21 27,21 L33.0000247,21 Z M33,19 L28,19 L28,14.003 L33,19 Z M20,19 L20,21 L23,21 L23,19 L20,19 Z M20,23 L20,25 L28,25 L28,23 L20,23 Z M20,27 L20,29 L28,29 L28,27 L20,27 Z" id="形状" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

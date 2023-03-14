@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/图谱/拓扑/技术/标记</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="16" rx="8"></rect>
+        <filter x="-21.9%" y="-15.6%" width="143.8%" height="143.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.50318002   0 0 0 0 0.377964716   0 0 0 0 0  0 0 0 0.24 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="icon/图谱/拓扑/技术/标记" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(5.000000, 5.000000)">
+            <circle id="椭圆形" stroke="#11BC83" fill-opacity="0.8" fill="#11BC83" cx="24" cy="24" r="23.5"></circle>
+            <g id="code-box-fill" transform="translate(12.000000, 12.000000)">
+                <polygon id="路径" points="0 0 24 0 24 24 0 24"></polygon>
+                <path d="M3,3 L21,3 C21.5522847,3 22,3.44771525 22,4 L22,20 C22,20.5522847 21.5522847,21 21,21 L3,21 C2.44771525,21 2,20.5522847 2,20 L2,4 C2,3.44771525 2.44771525,3 3,3 Z M16.464,15.536 L20,12 L16.464,8.464 L15.05,9.88 L17.172,12 L15.05,14.121 L16.464,15.536 L16.464,15.536 Z M6.828,12 L8.95,9.879 L7.536,8.464 L4,12 L7.536,15.536 L8.95,14.12 L6.828,12 Z M11.244,17 L14.884,7 L12.756,7 L9.116,17 L11.244,17 Z" id="形状" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+        <g id="icon_锁定备份" transform="translate(38.000000, 40.000000)">
+            <g id="矩形" fill-rule="nonzero">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" xlink:href="#path-1"></use>
+            </g>
+            <rect id="矩形备份-2" fill="#F5BE15" x="0" y="0" width="16" height="16" rx="8"></rect>
+            <path d="M4.34285714,4 L12.1388373,4 C12.2114976,3.99987892 12.2787204,4.03847416 12.3152483,4.1012854 C12.3517763,4.16409665 12.3520769,4.24161054 12.3160372,4.30470319 L10.860554,6.85149323 L12.3160372,9.39828327 C12.3520769,9.46137593 12.3517763,9.53888982 12.3152483,9.60170106 C12.2787204,9.6645123 12.2114976,9.70310755 12.1388373,9.7029856 L5.15756925,9.7029856 L5.15756925,13.1364152 L4.34285714,13.1364152 L4.34285714,4 Z" id="路径" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
