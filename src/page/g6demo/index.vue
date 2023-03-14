@@ -336,36 +336,112 @@ const data = {
       target: '2',
     },
     {
-      source: '3',
-      target: '1',
+      source: '1',
+      target: '3',
     },
     {
-      source: '4',
-      target: '1',
+      source: '1',
+      target: '4',
     },
     {
-      source: '5',
-      target: '1',
+      source: '1',
+      target: '5',
     },
     {
-      source: '6',
-      target: '1',
+      source: '1',
+      target: '6',
     },
     {
-      source: '7',
-      target: '1',
+      source: '1',
+      target: '7',
     },
     {
-      source: '8',
-      target: '1',
+      source: '1',
+      target: '8',
     },
     {
-      source: '9',
-      target: '1',
+      source: '1',
+      target: '9',
     },
     {
-      source: '10',
-      target: '1',
+      source: '1',
+      target: '10',
+    },
+    {
+      source: '1',
+      target: '11',
+    },
+    {
+      source: '1',
+      target: '12',
+    },
+    {
+      source: '1',
+      target: '13',
+    },
+    {
+      source: '1',
+      target: '14',
+    },
+    {
+      source: '1',
+      target: '15',
+    },
+    {
+      source: '1',
+      target: '16',
+    },
+    {
+      source: '1',
+      target: '17',
+    },
+    {
+      source: '1',
+      target: '18',
+    },
+    {
+      source: '1',
+      target: '19',
+    },
+    {
+      source: '1',
+      target: '20',
+    },
+    {
+      source: '1',
+      target: '21',
+    },
+    {
+      source: '1',
+      target: '22',
+    },
+    {
+      source: '1',
+      target: '23',
+    },
+    {
+      source: '1',
+      target: '24',
+    },
+    {
+      source: '1',
+      target: '25',
+    },
+    {
+      source: '1',
+      target: '26',
+    },
+    {
+      source: '1',
+      target: '27',
+    },
+    {
+      source: '1',
+      target: '28',
+    },
+    {
+      source: '1',
+      target: '29',
     },
   ],
 }
@@ -381,8 +457,8 @@ const processData = (data) => {
       cursor: 'pointer',
       show: true,
       img: setGraphIcon(item.style?.icon, 'default'),
-      width: 40,
-      height: 40
+      width: 30,
+      height: 30
     },
     labelCfg: {
       position: 'bottom',
@@ -393,11 +469,11 @@ const processData = (data) => {
     ...item,
     label: item.chineseLabel || item.label,
     style: {
-      stroke: item.style?.color || '#BAC8EF',
+      stroke: item.style?.color || '#5c73e6',
       lineWidth: 1.8,
       endArrow: {
         path: 'M 0, 0 L 8, 2 L 9 L 8, -2 Z',
-        fill: item.style?.color || '#BAC8EF'
+        fill: item.style?.color || '#5c73e6'
       }
     }
   }))
@@ -410,7 +486,6 @@ const refreshDragNodePosition = (e) => {
   model.fy = e.y
 }
 
-let dragLocked = false
 G6.registerNode('custom-circle', {
   setState(name, value, item) {
     const group = item.getContainer()
@@ -428,13 +503,23 @@ G6.registerNode('custom-circle', {
         name: `${name}-text-shape`
       })
     }
+    if (name === 'selected') {
+      const shape = group.get('children')[0]
+      if (value) {
+        shape.attr('stroke', '#f2910f')
+        shape.attr('lineWidth', 2)
+      } else {
+        shape.attr('stroke', '')
+        shape.attr('lineWidth', 1)
+      }
+    }
   }
 }, 'circle')
 onMounted(() => {
   const graph = new G6.Graph({
     container: container.value,
     defaultNode: {
-      size: 30,
+      size: 26,
       style: {
         fill: '',
         stroke: ''
@@ -470,32 +555,36 @@ onMounted(() => {
     width: container.value.clientWidth,
     height: container.value.clientHeight,
     modes: {
-      default: ['zoom-canvas', 'drag-canvas', 'drag-node'],
+      default: ['zoom-canvas', 'drag-canvas', 'drag-node', 'click-select'],
     },
     layout: {
       type: 'force2',
       animate: true, // 设置为 false 可关闭布局动画
-      maxSpeed: 100,
-      linkDistance: 50,
+     nodeSpacing: 20,
+      minMovement: 0.5,
+      distanceThresholdMode: 'mean',
+      maxIteration: 300,
+      maxSpeed: 3000,
+      damping: 0.8,
+      interval: 0.016,
+      factor: 3,
+      columnDisScale: 0.004,
+      gravity: 3,
+      nodeStrength: 500
     },
   });
   graph.data(processData(data));
   graph.render();
 
   graph.on('node:dragstart', (e) => {
-    console.log('dragstart')
     refreshDragNodePosition(e)
   })
   graph.on('node:drag', (e) => {
-    console.log('drag')
-    if (dragLocked) return
     refreshDragNodePosition(e)
     const forceLayout = graph.get('layoutController')?.layoutMethods[0]
     forceLayout.execute()
   })
   graph.on('node:dragend', (e) => {
-    console.log('dragend')
-    dragLocked = false
     const model = e.item.get('model')
     model.fx = null
     model.fy = null
