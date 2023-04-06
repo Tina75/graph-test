@@ -1,12 +1,14 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import VisRewrite from '../page/VisRewrite.vue'
-import Vis from "../page/Vis.vue";
+// import VisRewrite from '../page/VisRewrite.vue'
+// import Vis from "../page/Vis.vue";
 import G6Demo from "../page/g6demo/index.vue";
+// import Test from "../page/test";
 
 const routes = [
-    { path: '/vis', component: Vis },
-    { path: '/visRewrite', component: VisRewrite },
-    { path: '/g6demo', component: G6Demo }
+    // { path: '/vis', component: Vis },
+    // { path: '/visRewrite', component: VisRewrite },
+    { path: '/g6demo', component: G6Demo },
+    // { path: '/test', component: Test },
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置
