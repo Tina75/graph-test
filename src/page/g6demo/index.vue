@@ -31,13 +31,37 @@ const data = {
         single: true,
       },
     },
+    {
+      id: '1',
+      label: '0',
+      properties: {
+        custom_sensitivity: "0",
+        sensitivity: "0",
+        name: "程海清",
+        id: "40341",
+        mobile: "17853688168",
+      },
+      modes: {
+        x: "782",
+        y: "225",
+      },
+      style: {
+        icon: "person",
+        displayFields: ["name"],
+        display: false,
+        single: true,
+      },
+    },
   ],
   edges: [
-  //   // {
-  //   //   source: '1',
-  //   //   target: '0',
-  //   // },
-  //   // },
+    // {
+    //   source: '0',
+    //   target: '1',
+    // },
+    // {
+    //   source: '1',
+    //   target: '2',
+    // },
   ],
 }
 
